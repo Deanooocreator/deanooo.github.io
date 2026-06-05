@@ -14,12 +14,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Space Grotesk', sans-serif;
-    -webkit-tap-highlight-color: transparent;
 }
 
 body {
     background: #2D5BFF;
-    /* Grid background dibuat sedikit lebih tipis agar lebih clean */
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.05) 2px, transparent 2px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.05) 2px, transparent 2px);
@@ -33,15 +31,14 @@ body {
 
 .container {
     width: 100%;
-    max-width: 380px; /* Sedikit diperkecil agar lebih ramping dan pas di layar HP */
+    max-width: 380px;
     margin: auto;
 }
 
-/* Animasi Muncul Pertama Kali (Fade In Up) */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(15px);
     }
     to {
         opacity: 1;
@@ -57,7 +54,7 @@ body {
     padding: 24px 16px;
     text-align: center;
     margin-bottom: 20px;
-    animation: fadeInUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    animation: fadeInUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15) both;
 }
 
 .profile-container {
@@ -71,12 +68,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Efek spin halus pada foto saat halaman pertama dimuat */
-    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.profile-container:hover {
-    transform: scale(1.05) rotate(5deg); /* Sedikit membesar dan miring saat di-hover */
+    transition: transform 0.3s ease;
 }
 
 .profile-container img {
@@ -131,31 +123,36 @@ h1 {
     box-shadow: 6px 6px 0 #111;
     position: relative;
     
-    /* TRANSISI SMOOTH: Kunci agar gerakan menekan tidak kaku */
-    transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
-                box-shadow 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-                background-color 0.2s ease;
+    /* 1. KUNCI UTAMA: Menghilangkan kotak hitam/abu bawaan browser HP saat di-tap */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    
+    /* Transisi yang lebih pendek agar tidak terasa delay saat berpindah halaman */
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
 }
 
-/* Efek Hover (Saat kursor di atasnya atau saat ditahan di HP) */
-.link:hover {
-    background: #f6ff63; /* Warna kuningnya sedikit lebih terang saat di-hover */
-    transform: translate(-2px, -2px); /* Tombol sedikit naik seolah melayang */
-    box-shadow: 8px 8px 0 #111; /* Bayangan memanjang memberikan efek 3D melayang */
+/* Efek Hover untuk Laptop/Desktop */
+@media (hover: hover) {
+    .link:hover {
+        background: #f6ff63;
+        transform: translate(-2px, -2px);
+        box-shadow: 8px 8px 0 #111;
+    }
 }
 
-/* Efek Aktif (Pas benar-benar diklik/di-tap) */
+/* Efek Aktif saat benar-benar di-tap/klik (Fokus pada transisi yang clean) */
 .link:active {
-    transform: translate(6px, 6px); /* Pas ditekan, tombol masuk sepenuhnya mengikuti posisi shadow */
-    box-shadow: 0px 0px 0 #111; /* Bayangan hilang karena tertutup tombol */
+    transform: translate(4px, 4px) !important;
+    box-shadow: 2px 2px 0 #111 !important;
+    background: #d8e600;
 }
 
-/* Efek animasi masuk berurutan untuk tiap tombol link */
-.link:nth-child(2) { animation: fadeInUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s both; }
-.link:nth-child(3) { animation: fadeInUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s both; }
-.link:nth-child(4) { animation: fadeInUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both; }
-.link:nth-child(5) { animation: fadeInUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s both; }
-.link:nth-child(6) { animation: fadeInUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s both; }
+/* Efek animasi muncul berurutan */
+.link:nth-child(2) { animation: fadeInUp 0.4s ease 0.05s both; }
+.link:nth-child(3) { animation: fadeInUp 0.4s ease 0.1s both; }
+.link:nth-child(4) { animation: fadeInUp 0.4s ease 0.15s both; }
+.link:nth-child(5) { animation: fadeInUp 0.4s ease 0.2s both; }
+.link:nth-child(6) { animation: fadeInUp 0.4s ease 0.25s both; }
 
 .footer {
     text-align: center;
@@ -164,7 +161,7 @@ h1 {
     font-weight: 700;
     font-size: 0.85rem;
     letter-spacing: 0.5px;
-    animation: fadeInUp 0.5s ease 0.6s both;
+    animation: fadeInUp 0.4s ease 0.3s both;
 }
 </style>
 </head>
@@ -179,33 +176,16 @@ h1 {
         </div>
         
         <h1>DEANOOO</h1>
-        
         <div class="tagline">PLAY • CREATE • WIN</div>
-        
         <div class="line"></div>
-        
         <div class="desc">Gaming Content • Community • Entertainment</div>
     </div>
 
-    <a class="link" href="https://www.tiktok.com/@deaaanoo?_r=1&_t=ZS-96xIgVcq5ln" target="_blank">
-        TikTok
-    </a>
-
-    <a class="link" href="https://youtube.com/@deaanooo?si=W_JEmHk3qRwxwDER" target="_blank">
-        YouTube
-    </a>
-
-    <a class="link" href="https://www.facebook.com/share/1CcjwmUfjn/" target="_blank">
-        Facebook
-    </a>
-
-    <a class="link" href="https://sociabuzz.com/deanooo/tribe" target="_blank">
-        Sociabuzz Tribe
-    </a>
-
-    <a class="link" href="https://saweria.co/BLIICO" target="_blank">
-        Saweria
-    </a>
+    <a class="link" href="https://www.tiktok.com/@deaaanoo?_r=1&_t=ZS-96xIgVcq5ln" target="_blank">TikTok</a>
+    <a class="link" href="https://youtube.com/@deaanooo?si=W_JEmHk3qRwxwDER" target="_blank">YouTube</a>
+    <a class="link" href="https://www.facebook.com/share/1CcjwmUfjn/" target="_blank">Facebook</a>
+    <a class="link" href="https://sociabuzz.com/deanooo/tribe" target="_blank">Sociabuzz Tribe</a>
+    <a class="link" href="https://saweria.co/BLIICO" target="_blank">Saweria</a>
 
     <div class="footer">
         © DEANOOO
