@@ -108,13 +108,12 @@ h1 {
     font-weight: 700;
 }
 
+/* Base style untuk semua link */
 .link {
     display: block;
     text-decoration: none;
     text-align: center;
-    background: #EEFF00;
-    color: #111;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 800;
     padding: 15px;
     margin-bottom: 16px;
@@ -122,32 +121,67 @@ h1 {
     border-radius: 16px;
     box-shadow: 6px 6px 0 #111;
     position: relative;
-    
-    /* 1. KUNCI UTAMA: Menghilangkan kotak hitam/abu bawaan browser HP saat di-tap */
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
-    
-    /* Transisi yang lebih pendek agar tidak terasa delay saat berpindah halaman */
     transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
 }
 
-/* Efek Hover untuk Laptop/Desktop */
+/* PALET WARNA NEOBRUTALISM MASING-MASING TOMBOL */
+
+/* 1. TikTok (Hitam, teks putih agar kontras) */
+.link-tiktok {
+    background: #111111;
+    color: #FFFFFF;
+}
+
+/* 2. YouTube (Merah menyala khas neobrutalism) */
+.link-youtube {
+    background: #FF3333;
+    color: #111111;
+}
+
+/* 3. Facebook (Biru cerah) */
+.link-facebook {
+    background: #3399FF;
+    color: #111111;
+}
+
+/* 4. Sociabuzz Tribe (Hijau neon/stabilo) */
+.link-sociabuzz {
+    background: #00FF66;
+    color: #111111;
+}
+
+/* 5. Saweria (Kuning neon terang) */
+.link-saweria {
+    background: #FFFF00;
+    color: #111111;
+}
+
+
+/* EFEK INTERAKSI */
+
+/* Efek Hover untuk Desktop */
 @media (hover: hover) {
     .link:hover {
-        background: #f6ff63;
         transform: translate(-2px, -2px);
         box-shadow: 8px 8px 0 #111;
     }
+    /* Sedikit menggelapkan/menerangkan warna saat di-hover agar dinamis */
+    .link-tiktok:hover { background: #222222; }
+    .link-youtube:hover { background: #ff4d4d; }
+    .link-facebook:hover { background: #4da6ff; }
+    .link-sociabuzz:hover { background: #1eff76; }
+    .link-saweria:hover { background: #fff71a; }
 }
 
-/* Efek Aktif saat benar-benar di-tap/klik (Fokus pada transisi yang clean) */
+/* Efek Aktif saat ditekan (Smooth tanpa kedipan hitam) */
 .link:active {
     transform: translate(4px, 4px) !important;
     box-shadow: 2px 2px 0 #111 !important;
-    background: #d8e600;
 }
 
-/* Efek animasi muncul berurutan */
+/* Efek animasi muncul berurutan (Staggered Load) */
 .link:nth-child(2) { animation: fadeInUp 0.4s ease 0.05s both; }
 .link:nth-child(3) { animation: fadeInUp 0.4s ease 0.1s both; }
 .link:nth-child(4) { animation: fadeInUp 0.4s ease 0.15s both; }
@@ -170,6 +204,7 @@ h1 {
 
 <div class="container">
 
+    <!-- Card Utama -->
     <div class="card">
         <div class="profile-container">
             <img src="lv_0_20260605163847.jpg" alt="DEANOOO">
@@ -181,12 +216,18 @@ h1 {
         <div class="desc">Gaming Content • Community • Entertainment</div>
     </div>
 
-    <a class="link" href="https://www.tiktok.com/@deaaanoo?_r=1&_t=ZS-96xIgVcq5ln" target="_blank">TikTok</a>
-    <a class="link" href="https://youtube.com/@deaanooo?si=W_JEmHk3qRwxwDER" target="_blank">YouTube</a>
-    <a class="link" href="https://www.facebook.com/share/1CcjwmUfjn/" target="_blank">Facebook</a>
-    <a class="link" href="https://sociabuzz.com/deanooo/tribe" target="_blank">Sociabuzz Tribe</a>
-    <a class="link" href="https://saweria.co/BLIICO" target="_blank">Saweria</a>
+    <!-- Tombol Link dengan Class Warna Baru -->
+    <a class="link link-tiktok" href="https://www.tiktok.com/@deaaanoo?_r=1&_t=ZS-96xIgVcq5ln" target="_blank">TikTok</a>
+    
+    <a class="link link-youtube" href="https://youtube.com/@deaanooo?si=W_JEmHk3qRwxwDER" target="_blank">YouTube</a>
+    
+    <a class="link link-facebook" href="https://www.facebook.com/share/1CcjwmUfjn/" target="_blank">Facebook</a>
+    
+    <a class="link link-sociabuzz" href="https://sociabuzz.com/deanooo/tribe" target="_blank">Sociabuzz Tribe</a>
+    
+    <a class="link link-saweria" href="https://saweria.co/BLIICO" target="_blank">Saweria</a>
 
+    <!-- Footer -->
     <div class="footer">
         © DEANOOO
     </div>
