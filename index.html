@@ -9,106 +9,108 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Space Grotesk',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Space Grotesk',sans-serif;
 }
 
 body{
-    background:#2d5bff;
-    background-image:
-    linear-gradient(rgba(255,255,255,.08) 2px, transparent 2px),
-    linear-gradient(90deg, rgba(255,255,255,.08) 2px, transparent 2px);
-    background-size:80px 80px;
-    padding:30px 15px;
+background:#2D5BFF;
+background-image:
+linear-gradient(rgba(255,255,255,.08) 2px, transparent 2px),
+linear-gradient(90deg, rgba(255,255,255,.08) 2px, transparent 2px);
+background-size:80px 80px;
+padding:30px 15px;
 }
 
 .container{
-    max-width:430px;
-    margin:auto;
+max-width:430px;
+margin:auto;
 }
 
-.banner{
-    width:100%;
-    border-radius:20px;
-    margin-bottom:25px;
+.card{
+background:#F5F5F5;
+border:5px solid #111;
+border-radius:35px;
+box-shadow:10px 10px 0px #111;
+padding:35px 25px;
+text-align:center;
+margin-bottom:30px;
 }
 
 .profile{
-    background:#f5f5f5;
-    border:5px solid #111;
-    border-radius:30px;
-    box-shadow:10px 10px 0 #111;
-    padding:30px 20px;
-    text-align:center;
-    margin-bottom:25px;
-}
-
-.profile img{
-    width:140px;
-    height:140px;
-    border-radius:50%;
-    border:5px solid #111;
-    object-fit:cover;
-    display:block;
-    margin:0 auto 20px;
+width:150px;
+height:150px;
+border-radius:50%;
+border:5px solid #111;
+object-fit:cover;
+display:block;
+margin:0 auto 25px;
+background:white;
 }
 
 h1{
-    font-size:3rem;
-    font-weight:800;
-    color:#111;
+font-size:3rem;
+font-weight:800;
+color:#111;
+margin-bottom:10px;
 }
 
 .tagline{
-    color:#2d5bff;
-    font-weight:800;
-    margin-top:12px;
-    font-size:1.1rem;
+font-size:1.2rem;
+font-weight:800;
+color:#2D5BFF;
+margin-bottom:20px;
 }
 
 .line{
-    width:80%;
-    height:4px;
-    background:#111;
-    margin:20px auto;
+width:80%;
+height:4px;
+background:#111;
+margin:0 auto 20px;
 }
 
 .desc{
-    color:#222;
-    line-height:1.6;
-    font-size:1rem;
+font-size:1.1rem;
+font-weight:500;
+line-height:1.7;
+color:#222;
 }
 
 .link{
-    display:block;
-    text-decoration:none;
-    text-align:center;
-    background:#eeff00;
-    color:#111;
-    font-size:1.4rem;
-    font-weight:800;
-    border:5px solid #111;
-    border-radius:22px;
-    box-shadow:8px 8px 0 #111;
-    padding:22px;
-    margin-bottom:22px;
-    transition:.15s;
+display:block;
+text-decoration:none;
+text-align:center;
+background:#EEFF00;
+color:#111;
+font-weight:800;
+font-size:1.5rem;
+padding:22px;
+margin-bottom:22px;
+
+border:5px solid #111;
+border-radius:22px;
+box-shadow:8px 8px 0px #111;
+
+transition:.15s;
 }
 
 .link:hover{
-    transform:translate(4px,4px);
-    box-shadow:4px 4px 0 #111;
+transform:translate(4px,4px);
+box-shadow:4px 4px 0px #111;
 }
 
 .footer{
-    text-align:center;
-    color:white;
-    font-weight:700;
-    margin-top:30px;
+text-align:center;
+margin-top:30px;
+color:white;
+font-weight:700;
+font-size:1rem;
 }
+
 </style>
 </head>
 
@@ -116,44 +118,47 @@ h1{
 
 <div class="container">
 
-    <!-- FOTO LOGO -->
-    <div class="profile">
-        <img src="lv_0_20260605163847.jpg" alt="DEANOOO">
+<div class="card">
 
-        <h1>DEANOOO</h1>
+<img src="lv_0_20260605163847.jpg" class="profile">
 
-        <p class="tagline">PLAY • CREATE • WIN</p>
+<h1>DEANOOO</h1>
 
-        <div class="line"></div>
+<div class="tagline">
+PLAY • CREATE • WIN
+</div>
 
-        <p class="desc">
-            Gaming Content • Community • Entertainment
-        </p>
-    </div>
+<div class="line"></div>
 
-    <a class="link" href="https://www.tiktok.com/@deaaanoo?_r=1&_t=ZS-96xIgVcq5ln" target="_blank">
-        TikTok
-    </a>
+<div class="desc">
+Gaming Content • Community • Entertainment
+</div>
 
-    <a class="link" href="https://youtube.com/@deaanooo?si=W_JEmHk3qRwxwDER" target="_blank">
-        YouTube
-    </a>
+</div>
 
-    <a class="link" href="https://www.facebook.com/share/1CcjwmUfjn/" target="_blank">
-        Facebook
-    </a>
+<a class="link" href="https://www.tiktok.com/@deaaanoo?_r=1&_t=ZS-96xIgVcq5ln">
+TikTok
+</a>
 
-    <a class="link" href="https://sociabuzz.com/deanooo/tribe" target="_blank">
-        Sociabuzz Tribe
-    </a>
+<a class="link" href="https://youtube.com/@deaanooo?si=W_JEmHk3qRwxwDER">
+YouTube
+</a>
 
-    <a class="link" href="https://saweria.co/BLIICO" target="_blank">
-        Saweria
-    </a>
+<a class="link" href="https://www.facebook.com/share/1CcjwmUfjn/">
+Facebook
+</a>
 
-    <div class="footer">
-        © DEANOOO
-    </div>
+<a class="link" href="https://sociabuzz.com/deanooo/tribe">
+Sociabuzz Tribe
+</a>
+
+<a class="link" href="https://saweria.co/BLIICO">
+Saweria
+</a>
+
+<div class="footer">
+© DEANOOO
+</div>
 
 </div>
 
