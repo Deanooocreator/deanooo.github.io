@@ -126,48 +126,48 @@ h1 {
     transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
 }
 
-/* PALET WARNA NEOBRUTALISM MASING-MASING TOMBOL */
 
-/* 1. TikTok (Hitam, teks putih agar kontras) */
+/* PENGATURAN WARNA TOMBOL MASING-MASING SOSMED */
+
+/* TikTok - Hitam Neobrutalism (Teks Putih) */
 .link-tiktok {
     background: #111111;
     color: #FFFFFF;
 }
 
-/* 2. YouTube (Merah menyala khas neobrutalism) */
+/* YouTube - Merah Terang Menggelegar */
 .link-youtube {
     background: #FF3333;
     color: #111111;
 }
 
-/* 3. Facebook (Biru cerah) */
+/* Facebook - Biru Cerah Pop-Art */
 .link-facebook {
     background: #3399FF;
     color: #111111;
 }
 
-/* 4. Sociabuzz Tribe (Hijau neon/stabilo) */
+/* Sociabuzz - Hijau Stabilo/Neon */
 .link-sociabuzz {
     background: #00FF66;
     color: #111111;
 }
 
-/* 5. Saweria (Kuning neon terang) */
+/* Saweria - Kuning Terang Asli */
 .link-saweria {
     background: #FFFF00;
     color: #111111;
 }
 
 
-/* EFEK INTERAKSI */
+/* INTERAKSI & ANIMASI SMOOTH */
 
-/* Efek Hover untuk Desktop */
+/* Efek Hover untuk Layar Komputer/Laptop */
 @media (hover: hover) {
     .link:hover {
         transform: translate(-2px, -2px);
         box-shadow: 8px 8px 0 #111;
     }
-    /* Sedikit menggelapkan/menerangkan warna saat di-hover agar dinamis */
     .link-tiktok:hover { background: #222222; }
     .link-youtube:hover { background: #ff4d4d; }
     .link-facebook:hover { background: #4da6ff; }
@@ -175,13 +175,13 @@ h1 {
     .link-saweria:hover { background: #fff71a; }
 }
 
-/* Efek Aktif saat ditekan (Smooth tanpa kedipan hitam) */
+/* Efek Aktif saat di-tap/klik di HP (Mendelik sempurna tanpa glitch hitam) */
 .link:active {
     transform: translate(4px, 4px) !important;
     box-shadow: 2px 2px 0 #111 !important;
 }
 
-/* Efek animasi muncul berurutan (Staggered Load) */
+/* Animasi Masuk Berurutan */
 .link:nth-child(2) { animation: fadeInUp 0.4s ease 0.05s both; }
 .link:nth-child(3) { animation: fadeInUp 0.4s ease 0.1s both; }
 .link:nth-child(4) { animation: fadeInUp 0.4s ease 0.15s both; }
@@ -204,7 +204,7 @@ h1 {
 
 <div class="container">
 
-    <!-- Card Utama -->
+    <!-- Card Profil Utama -->
     <div class="card">
         <div class="profile-container">
             <img src="lv_0_20260605163847.jpg" alt="DEANOOO">
@@ -216,7 +216,7 @@ h1 {
         <div class="desc">Gaming Content • Community • Entertainment</div>
     </div>
 
-    <!-- Tombol Link dengan Class Warna Baru -->
+    <!-- Daftar Tombol Link dengan Class Warna Spesifik -->
     <a class="link link-tiktok" href="https://www.tiktok.com/@deaaanoo?_r=1&_t=ZS-96xIgVcq5ln" target="_blank">TikTok</a>
     
     <a class="link link-youtube" href="https://youtube.com/@deaanooo?si=W_JEmHk3qRwxwDER" target="_blank">YouTube</a>
