@@ -22,7 +22,7 @@ body {
         linear-gradient(rgba(255, 255, 255, 0.05) 2px, transparent 2px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.05) 2px, transparent 2px);
     background-size: 40px 40px;
-    padding: 30px 18px;
+    padding: 20px 18px; /* Padding dikurangi agar konten lebih naik */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,24 +46,26 @@ body {
     }
 }
 
+/* REVISI: Ukuran card putih diperkecil (padding dikurangi) */
 .card {
     background: #F5F5F5;
     border: 4px solid #111;
     border-radius: 24px;
     box-shadow: 8px 8px 0 #111;
-    padding: 24px 16px;
+    padding: 16px 16px; /* Diperkecil dari 24px ke 16px */
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 16px; /* Jarak ke tombol dikurangi */
     animation: fadeInUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15) both;
 }
 
+/* REVISI: Ukuran foto profil sedikit dikecilkan agar pas */
 .profile-container {
-    width: 105px;
-    height: 105px;
+    width: 95px; 
+    height: 95px;
     border-radius: 50%;
     border: 4px solid #111;
     background: #2D5BFF; 
-    margin: 0 auto 16px;
+    margin: 0 auto 12px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -77,20 +79,21 @@ body {
     object-fit: cover;
 }
 
+/* REVISI: font h1 diperkecil sedikit */
 h1 {
-    font-size: 2.1rem;
+    font-size: 1.9rem; 
     font-weight: 800;
     color: #111;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .tagline {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 800;
     color: #2D5BFF;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     letter-spacing: 1px;
 }
 
@@ -98,11 +101,11 @@ h1 {
     width: 75%;
     height: 4px;
     background: #111;
-    margin: 0 auto 14px;
+    margin: 0 auto 10px;
 }
 
 .desc {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     line-height: 1.4;
     color: #111;
     font-weight: 700;
@@ -113,10 +116,10 @@ h1 {
     display: block;
     text-decoration: none;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 800;
-    padding: 15px;
-    margin-bottom: 16px;
+    padding: 14px; /* Dikecilkan sedikit dari 15px agar pas di layar */
+    margin-bottom: 14px;
     border: 4px solid #111;
     border-radius: 16px;
     box-shadow: 6px 6px 0 #111;
@@ -126,48 +129,51 @@ h1 {
     transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
 }
 
+/* PALET WARNA TOMBOL */
 
-/* PENGATURAN WARNA TOMBOL MASING-MASING SOSMED */
+/* Instagram Baru - Pink keunguan Neobrutalism (Teks Hitam) */
+.link-ig {
+    background: #FF00AF;
+    color: #111111;
+}
 
-/* TikTok - Hitam Neobrutalism (Teks Putih) */
+/* TikTok - Hitam (Teks Putih) */
 .link-tiktok {
     background: #111111;
     color: #FFFFFF;
 }
 
-/* YouTube - Merah Terang Menggelegar */
+/* YouTube - Merah */
 .link-youtube {
     background: #FF3333;
     color: #111111;
 }
 
-/* Facebook - Biru Cerah Pop-Art */
+/* Facebook - Biru */
 .link-facebook {
     background: #3399FF;
     color: #111111;
 }
 
-/* Sociabuzz - Hijau Stabilo/Neon */
+/* Sociabuzz - Hijau */
 .link-sociabuzz {
     background: #00FF66;
     color: #111111;
 }
 
-/* Saweria - Kuning Terang Asli */
+/* Saweria - Kuning */
 .link-saweria {
     background: #FFFF00;
     color: #111111;
 }
 
-
-/* INTERAKSI & ANIMASI SMOOTH */
-
-/* Efek Hover untuk Layar Komputer/Laptop */
+/* INTERAKSI & ANIMASI */
 @media (hover: hover) {
     .link:hover {
         transform: translate(-2px, -2px);
         box-shadow: 8px 8px 0 #111;
     }
+    .link-ig:hover { background: #ff33c1; }
     .link-tiktok:hover { background: #222222; }
     .link-youtube:hover { background: #ff4d4d; }
     .link-facebook:hover { background: #4da6ff; }
@@ -175,7 +181,6 @@ h1 {
     .link-saweria:hover { background: #fff71a; }
 }
 
-/* Efek Aktif saat di-tap/klik di HP (Mendelik sempurna tanpa glitch hitam) */
 .link:active {
     transform: translate(4px, 4px) !important;
     box-shadow: 2px 2px 0 #111 !important;
@@ -187,15 +192,16 @@ h1 {
 .link:nth-child(4) { animation: fadeInUp 0.4s ease 0.15s both; }
 .link:nth-child(5) { animation: fadeInUp 0.4s ease 0.2s both; }
 .link:nth-child(6) { animation: fadeInUp 0.4s ease 0.25s both; }
+.link:nth-child(7) { animation: fadeInUp 0.4s ease 0.3s both; }
 
 .footer {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 20px;
     color: white;
     font-weight: 700;
     font-size: 0.85rem;
     letter-spacing: 0.5px;
-    animation: fadeInUp 0.4s ease 0.3s both;
+    animation: fadeInUp 0.4s ease 0.35s both;
 }
 </style>
 </head>
@@ -204,7 +210,7 @@ h1 {
 
 <div class="container">
 
-    <!-- Card Profil Utama -->
+    <!-- Card Profil Utama (Ukurannya sudah dikecilkan agar pas) -->
     <div class="card">
         <div class="profile-container">
             <img src="lv_0_20260605163847.jpg" alt="DEANOOO">
@@ -216,7 +222,9 @@ h1 {
         <div class="desc">Gaming Content • Community • Entertainment</div>
     </div>
 
-    <!-- Daftar Tombol Link dengan Class Warna Spesifik -->
+    <!-- Tombol Baru: Instagram diletakkan sebelum TikTok -->
+    <a class="link link-ig" href="https://www.instagram.com/deano.ofc?igsh=OXVsMG15amVjMGJh" target="_blank">Instagram</a>
+
     <a class="link link-tiktok" href="https://www.tiktok.com/@deaaanoo?_r=1&_t=ZS-96xIgVcq5ln" target="_blank">TikTok</a>
     
     <a class="link link-youtube" href="https://youtube.com/@deaanooo?si=W_JEmHk3qRwxwDER" target="_blank">YouTube</a>
